@@ -1,9 +1,9 @@
 from rest_framework import status
 from .models import Project, ProjectRequest
 from .serializers import ProjectSerializer, ProjectRequestSerializer
-from .permissions import IsEmployer, IsFreelancer
+from .permissions import IsEmployer, IsFreelancer, IsProjectOwner
 from django.shortcuts import get_object_or_404
-from rest_framework.generics import ListCreateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -20,6 +20,12 @@ class ProjectListView(ListCreateAPIView):
     def perform_create(self, serializer):
         employer = self.request.user.employer
         serializer.save(employer=employer)
+
+
+class ProjectView(RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthenticated, IsEmployer, IsProjectOwner)
+    serializer_class = ProjectSerializer
+    queryset = Project.objects.all()
 
 
 class ProjectRequestView(APIView):
