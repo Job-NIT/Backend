@@ -141,4 +141,9 @@ REST_FRAMEWORK = {
     ]
 }
 
+# Django cors headers
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Django media
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
