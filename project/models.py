@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Project(models.Model):
+    image = models.ImageField(upload_to='projects', null=True, blank=True)
     title = models.CharField(max_length=255)
     detail = models.TextField()
     dead_line = models.DateTimeField()
