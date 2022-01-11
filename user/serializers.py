@@ -65,6 +65,23 @@ class FreelancerSerializer(serializers.ModelSerializer):
         return freelancer
 
 
+class FreelancerProfileSerializer(FreelancerSerializer):
+    class Meta(FreelancerSerializer.Meta):
+        fields = ('user',)
+
+    def update(self, instance, validated_data):
+        user_data = validated_data.pop('user', None)
+
+        if user_data:
+            user = UserSerializer().update(
+                instance=instance.user,
+                validated_data=user_data
+            )
+            user.save()
+
+        return super().update(instance, validated_data)
+
+
 class EmployerSerializer(serializers.ModelSerializer):
     user = UserSerializer(required=True)
     token = serializers.SerializerMethodField()
@@ -96,3 +113,20 @@ class EmployerSerializer(serializers.ModelSerializer):
         )
 
         return employer
+
+
+class EmployerProfileSerializer(EmployerSerializer):
+    class Meta(EmployerSerializer.Meta):
+        fields = ('user', 'company')
+
+    def update(self, instance, validated_data):
+        user_data = validated_data.pop('user', None)
+
+        if user_data:
+            user = UserSerializer().update(
+                instance=instance.user,
+                validated_data=user_data
+            )
+            user.save()
+
+        return super().update(instance, validated_data)
