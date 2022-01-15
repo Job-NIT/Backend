@@ -36,6 +36,12 @@ class UserSerializer(serializers.ModelSerializer):
         return attrs
 
 
+class UserDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'first_name', 'last_name')
+
+
 class FreelancerSerializer(serializers.ModelSerializer):
     user = UserSerializer(required=True)
     token = serializers.SerializerMethodField()
