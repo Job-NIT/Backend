@@ -11,6 +11,7 @@ class User(AbstractUser):
         FREELANCER = 'Freelancer'
         EMPLOYER = 'Employer'
 
+    image = models.ImageField(upload_to="profiles", null=True, blank=True)
     email = models.EmailField(unique=True, blank=False)
     phone_number = models.CharField(max_length=12, default='')
     user_type = models.CharField(

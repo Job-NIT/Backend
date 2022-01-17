@@ -18,12 +18,13 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = (
             'id', 'username', 'email', 'first_name', 'last_name',
-            'phone_number', 'user_type', 'password', 'password2'
+            'phone_number', 'image', 'user_type', 'password', 'password2'
         )
         extra_kwargs = {
             'first_name': {'required': True},
             'last_name': {'required': True},
-            'phone_number': {'required': True}
+            'phone_number': {'required': True},
+            'image': {'read_only': True}
         }
 
     def validate(self, attrs):
@@ -34,6 +35,18 @@ class UserSerializer(serializers.ModelSerializer):
 
         attrs.pop('password2', None)
         return attrs
+
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'first_name', 'last_name', 'image')
+
+
+class UserProfileImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('image',)
 
 
 class FreelancerSerializer(serializers.ModelSerializer):
