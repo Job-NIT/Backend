@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "0ec555e5-5a18-4079-8009-f73d736007db",
+		"name": "Auth Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register Freelancer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"username\": \"sajjad\",\n        \"email\": \"sajjad@gmail.com\",\n        \"first_name\": \"sajjad\",\n        \"last_name\": \"ahmadi\",\n        \"phone_number\": \"09014204944\",\n        \"password\": \"mypassword123\",\n        \"password2\": \"mypassword123\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/register/freelancer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"register",
+								"freelancer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Employer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"username\": \"sajjad\",\n        \"email\": \"sajjad@gmail.com\",\n        \"first_name\": \"sajjad\",\n        \"last_name\": \"ahmadi\",\n        \"phone_number\": \"09014204944\",\n        \"password\": \"mypassword123\",\n        \"password2\": \"mypassword123\"\n    },\n    \"company\": \"Sahdow Of Death\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/register/employer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"register",
+								"employer",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "sajjad",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mypassword123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 387f229a5fd147f1dc3dbfb6630bf3928f716a54",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/users/logout/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 737f49f425489b7b1c18c33e298cb00504344e3d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/users/user-info/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"user-info",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Get profile info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 9b35bc7d2b8105abaa7f599fe64d98ce958a879d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/users/profile/:profile_id/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile",
+								":profile_id",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "profile_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 9b35bc7d2b8105abaa7f599fe64d98ce958a879d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"username\": \"sajjad\",\n        \"email\": \"sajjad@gmail.com\",\n        \"first_name\": \"sajjad\",\n        \"last_name\": \"ahmadi\",\n        \"phone_number\": \"09014204944\",\n        \"user_type\": \"Employer\"\n    },\n    \"company\": \"Sahdow Of Death\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/profile/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User profile image",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 0527853d805b4112d42736471bc865cfd48b3466",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/profile-image/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"profile-image",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
