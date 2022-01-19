@@ -318,6 +318,38 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token b94a048e69ef55b842007acff360018d5667fdb7",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/projects/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"projects",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

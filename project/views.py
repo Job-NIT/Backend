@@ -1,15 +1,25 @@
 from rest_framework import status
-from .models import Project, ProjectRequest
-from .serializers import ProjectSerializer, ProjectRequestSerializer
+from .models import Category, Project, ProjectRequest
+from .serializers import (
+    CategorySerializer, ProjectSerializer, ProjectRequestSerializer
+)
 from .permissions import IsEmployer, IsFreelancer, IsProjectOwner
 from django.shortcuts import get_object_or_404
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import (
+    ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
+)
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.status import (
     HTTP_200_OK, HTTP_204_NO_CONTENT, HTTP_400_BAD_REQUEST
 )
+
+
+class CategoryListView(ListAPIView):
+    permission_classes = (IsAuthenticated,)
+    serializer_class = CategorySerializer
+    queryset = Category.objects.all()
 
 
 class ProjectListView(ListCreateAPIView):
