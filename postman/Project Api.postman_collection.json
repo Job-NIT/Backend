@@ -56,12 +56,12 @@
 								},
 								{
 									"key": "title",
-									"value": "title from api",
+									"value": "عنوان پروژه",
 									"type": "text"
 								},
 								{
 									"key": "detail",
-									"value": "Detail From API",
+									"value": "توضیحات پروژه",
 									"type": "text"
 								},
 								{
@@ -71,7 +71,12 @@
 								},
 								{
 									"key": "budget",
-									"value": "220000",
+									"value": "200000",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
 									"type": "text"
 								}
 							]
@@ -137,8 +142,8 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\": \"New Title\",\n    \"budget\": 350000\n}",
+							"mode": "formdata",
+							"formdata": [],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -195,6 +200,62 @@
 									"key": "project_id",
 									"value": "1"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employer Projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 5940d9e7036e70d70eea7456340f6157eb763f3e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/projects/list/employer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"projects",
+								"list",
+								"employer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Freelancer Projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 3d218533ad1ec555c92ce7061c2c7b75c3faf707",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/projects/list/freelancer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"projects",
+								"list",
+								"freelancer",
+								""
 							]
 						}
 					},
@@ -316,6 +377,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Accept Project Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 1730220c7eb5d02e0481c899fdb1b5a925f19e82",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/projects/request/:request_id/accept/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"projects",
+								"request",
+								":request_id",
+								"accept",
+								""
+							],
+							"variable": [
+								{
+									"key": "request_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -323,13 +419,13 @@
 			"name": "Category",
 			"item": [
 				{
-					"name": "List",
+					"name": "Category List",
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "token b94a048e69ef55b842007acff360018d5667fdb7",
+								"value": "token 35b7eea48920edd699918bcd9aa4ff4fab55d71b",
 								"type": "text"
 							}
 						],

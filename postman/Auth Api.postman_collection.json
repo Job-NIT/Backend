@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user\": {\n        \"username\": \"sajjad\",\n        \"email\": \"sajjad@gmail.com\",\n        \"first_name\": \"sajjad\",\n        \"last_name\": \"ahmadi\",\n        \"phone_number\": \"09014204944\",\n        \"password\": \"mypassword123\",\n        \"password2\": \"mypassword123\"\n    }\n}",
+							"raw": "{\n    \"user\": {\n        \"username\": \"freelancer\",\n        \"email\": \"freelancer@gmail.com\",\n        \"first_name\": \"اسم\",\n        \"last_name\": \"فامیلی\",\n        \"phone_number\": \"09014204944\",\n        \"password\": \"mypassword123\",\n        \"password2\": \"mypassword123\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -46,7 +46,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user\": {\n        \"username\": \"sajjad\",\n        \"email\": \"sajjad@gmail.com\",\n        \"first_name\": \"sajjad\",\n        \"last_name\": \"ahmadi\",\n        \"phone_number\": \"09014204944\",\n        \"password\": \"mypassword123\",\n        \"password2\": \"mypassword123\"\n    },\n    \"company\": \"Sahdow Of Death\"\n}",
+							"raw": "{\n    \"user\": {\n        \"username\": \"employer\",\n        \"email\": \"employer@gmail.com\",\n        \"first_name\": \"اسم\",\n        \"last_name\": \"فامیلی\",\n        \"phone_number\": \"09014204944\",\n        \"password\": \"mypassword123\",\n        \"password2\": \"mypassword123\"\n    },\n    \"company\": \"شرکت\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -85,7 +85,7 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "sajjad",
+									"value": "freelancer",
 									"type": "text"
 								},
 								{

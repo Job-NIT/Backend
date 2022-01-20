@@ -1,0 +1,839 @@
+[
+	{
+		"model": "auth.permission",
+		"pk": 1,
+		"fields": {
+			"name": "Can add log entry",
+			"content_type": 1,
+			"codename": "add_logentry"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 2,
+		"fields": {
+			"name": "Can change log entry",
+			"content_type": 1,
+			"codename": "change_logentry"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 3,
+		"fields": {
+			"name": "Can delete log entry",
+			"content_type": 1,
+			"codename": "delete_logentry"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 4,
+		"fields": {
+			"name": "Can view log entry",
+			"content_type": 1,
+			"codename": "view_logentry"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 5,
+		"fields": {
+			"name": "Can add permission",
+			"content_type": 2,
+			"codename": "add_permission"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 6,
+		"fields": {
+			"name": "Can change permission",
+			"content_type": 2,
+			"codename": "change_permission"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 7,
+		"fields": {
+			"name": "Can delete permission",
+			"content_type": 2,
+			"codename": "delete_permission"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 8,
+		"fields": {
+			"name": "Can view permission",
+			"content_type": 2,
+			"codename": "view_permission"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 9,
+		"fields": {
+			"name": "Can add group",
+			"content_type": 3,
+			"codename": "add_group"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 10,
+		"fields": {
+			"name": "Can change group",
+			"content_type": 3,
+			"codename": "change_group"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 11,
+		"fields": {
+			"name": "Can delete group",
+			"content_type": 3,
+			"codename": "delete_group"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 12,
+		"fields": {
+			"name": "Can view group",
+			"content_type": 3,
+			"codename": "view_group"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 13,
+		"fields": {
+			"name": "Can add content type",
+			"content_type": 4,
+			"codename": "add_contenttype"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 14,
+		"fields": {
+			"name": "Can change content type",
+			"content_type": 4,
+			"codename": "change_contenttype"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 15,
+		"fields": {
+			"name": "Can delete content type",
+			"content_type": 4,
+			"codename": "delete_contenttype"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 16,
+		"fields": {
+			"name": "Can view content type",
+			"content_type": 4,
+			"codename": "view_contenttype"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 17,
+		"fields": {
+			"name": "Can add session",
+			"content_type": 5,
+			"codename": "add_session"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 18,
+		"fields": {
+			"name": "Can change session",
+			"content_type": 5,
+			"codename": "change_session"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 19,
+		"fields": {
+			"name": "Can delete session",
+			"content_type": 5,
+			"codename": "delete_session"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 20,
+		"fields": {
+			"name": "Can view session",
+			"content_type": 5,
+			"codename": "view_session"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 21,
+		"fields": {
+			"name": "Can add user",
+			"content_type": 6,
+			"codename": "add_user"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 22,
+		"fields": {
+			"name": "Can change user",
+			"content_type": 6,
+			"codename": "change_user"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 23,
+		"fields": {
+			"name": "Can delete user",
+			"content_type": 6,
+			"codename": "delete_user"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 24,
+		"fields": {
+			"name": "Can view user",
+			"content_type": 6,
+			"codename": "view_user"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 25,
+		"fields": {
+			"name": "Can add employer",
+			"content_type": 7,
+			"codename": "add_employer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 26,
+		"fields": {
+			"name": "Can change employer",
+			"content_type": 7,
+			"codename": "change_employer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 27,
+		"fields": {
+			"name": "Can delete employer",
+			"content_type": 7,
+			"codename": "delete_employer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 28,
+		"fields": {
+			"name": "Can view employer",
+			"content_type": 7,
+			"codename": "view_employer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 29,
+		"fields": {
+			"name": "Can add freelancer",
+			"content_type": 8,
+			"codename": "add_freelancer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 30,
+		"fields": {
+			"name": "Can change freelancer",
+			"content_type": 8,
+			"codename": "change_freelancer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 31,
+		"fields": {
+			"name": "Can delete freelancer",
+			"content_type": 8,
+			"codename": "delete_freelancer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 32,
+		"fields": {
+			"name": "Can view freelancer",
+			"content_type": 8,
+			"codename": "view_freelancer"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 33,
+		"fields": {
+			"name": "Can add category",
+			"content_type": 9,
+			"codename": "add_category"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 34,
+		"fields": {
+			"name": "Can change category",
+			"content_type": 9,
+			"codename": "change_category"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 35,
+		"fields": {
+			"name": "Can delete category",
+			"content_type": 9,
+			"codename": "delete_category"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 36,
+		"fields": {
+			"name": "Can view category",
+			"content_type": 9,
+			"codename": "view_category"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 37,
+		"fields": {
+			"name": "Can add project",
+			"content_type": 10,
+			"codename": "add_project"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 38,
+		"fields": {
+			"name": "Can change project",
+			"content_type": 10,
+			"codename": "change_project"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 39,
+		"fields": {
+			"name": "Can delete project",
+			"content_type": 10,
+			"codename": "delete_project"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 40,
+		"fields": {
+			"name": "Can view project",
+			"content_type": 10,
+			"codename": "view_project"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 41,
+		"fields": {
+			"name": "Can add project request",
+			"content_type": 11,
+			"codename": "add_projectrequest"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 42,
+		"fields": {
+			"name": "Can change project request",
+			"content_type": 11,
+			"codename": "change_projectrequest"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 43,
+		"fields": {
+			"name": "Can delete project request",
+			"content_type": 11,
+			"codename": "delete_projectrequest"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 44,
+		"fields": {
+			"name": "Can view project request",
+			"content_type": 11,
+			"codename": "view_projectrequest"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 45,
+		"fields": {
+			"name": "Can add Token",
+			"content_type": 12,
+			"codename": "add_token"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 46,
+		"fields": {
+			"name": "Can change Token",
+			"content_type": 12,
+			"codename": "change_token"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 47,
+		"fields": {
+			"name": "Can delete Token",
+			"content_type": 12,
+			"codename": "delete_token"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 48,
+		"fields": {
+			"name": "Can view Token",
+			"content_type": 12,
+			"codename": "view_token"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 49,
+		"fields": {
+			"name": "Can add token",
+			"content_type": 13,
+			"codename": "add_tokenproxy"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 50,
+		"fields": {
+			"name": "Can change token",
+			"content_type": 13,
+			"codename": "change_tokenproxy"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 51,
+		"fields": {
+			"name": "Can delete token",
+			"content_type": 13,
+			"codename": "delete_tokenproxy"
+		}
+	},
+	{
+		"model": "auth.permission",
+		"pk": 52,
+		"fields": {
+			"name": "Can view token",
+			"content_type": 13,
+			"codename": "view_tokenproxy"
+		}
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 1,
+		"fields": { "app_label": "admin", "model": "logentry" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 2,
+		"fields": { "app_label": "auth", "model": "permission" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 3,
+		"fields": { "app_label": "auth", "model": "group" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 4,
+		"fields": { "app_label": "contenttypes", "model": "contenttype" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 5,
+		"fields": { "app_label": "sessions", "model": "session" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 6,
+		"fields": { "app_label": "user", "model": "user" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 7,
+		"fields": { "app_label": "user", "model": "employer" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 8,
+		"fields": { "app_label": "user", "model": "freelancer" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 9,
+		"fields": { "app_label": "project", "model": "category" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 10,
+		"fields": { "app_label": "project", "model": "project" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 11,
+		"fields": { "app_label": "project", "model": "projectrequest" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 12,
+		"fields": { "app_label": "authtoken", "model": "token" }
+	},
+	{
+		"model": "contenttypes.contenttype",
+		"pk": 13,
+		"fields": { "app_label": "authtoken", "model": "tokenproxy" }
+	},
+	{
+		"model": "user.user",
+		"pk": 1,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$0ICqNDV3kTjzJgyQfIG9Qo$0+XTreInlG+B+NvjjjeiySvXs3jxdsiuq9IaRwZ7+Kw=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "freelancer1",
+			"first_name": "فریلنسر",
+			"last_name": "1",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:20:31.611Z",
+			"image": "profiles/f1.jpg",
+			"email": "freelancer1@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Freelancer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{
+		"model": "user.user",
+		"pk": 2,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$2SBVO5oYidbMRcbQHgebZO$ce2MuhW3WsaZ8y3Outzc953lYj6bOmBvzYiDHwrKnIo=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "freelancer2",
+			"first_name": "فریلنسر",
+			"last_name": "2",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:20:42.826Z",
+			"image": "profiles/f2.jpeg",
+			"email": "freelancer2@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Freelancer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{
+		"model": "user.user",
+		"pk": 3,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$qQEpXfzHtNmIbnyQbihObc$8jl/PMGRf1OcjCmcyV9CUgCW1TuIq0i+8/UDgc1QxfQ=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "freelancer3",
+			"first_name": "فریلنسر",
+			"last_name": "3",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:20:48.834Z",
+			"image": "",
+			"email": "freelancer3@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Freelancer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{
+		"model": "user.user",
+		"pk": 4,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$iHkpNpPQQEtcXEbK0QEWdT$JcU0j5JHwuvf4H2ozdkrMcP2XcFSVFwGYuLLNqi0V7A=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "freelancer4",
+			"first_name": "فریلنسر",
+			"last_name": "4",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:20:54.522Z",
+			"image": "profiles/f3.jpeg",
+			"email": "freelancer4@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Freelancer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{
+		"model": "user.user",
+		"pk": 5,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$Rh7pH8u2G4azTZU2lkB78E$AeQ1zJa8rVawaYVbEoTvebsFHNGo65Wg7mkdNRdHpbc=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "employer1",
+			"first_name": "کارفرما",
+			"last_name": "1",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:21:54.245Z",
+			"image": "profiles/e1.jpeg",
+			"email": "employer1@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Employer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{
+		"model": "user.user",
+		"pk": 6,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$hySD3jtJYmDHick3yTvdTm$fUAfZdFD2mmNE7QwkJH71SVP04iLbIt16bX/JYbM5cE=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "employer2",
+			"first_name": "کارفرما",
+			"last_name": "2",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:21:59.733Z",
+			"image": "profiles/e3.jpeg",
+			"email": "employer2@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Employer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{
+		"model": "user.user",
+		"pk": 7,
+		"fields": {
+			"password": "pbkdf2_sha256$260000$edu5AmDTFdviVbesdvGgzJ$MYlbHAElKbBaXoQW9cPErwUa03W80n9uadZ/ZCiKZh8=",
+			"last_login": null,
+			"is_superuser": false,
+			"username": "employer3",
+			"first_name": "کارفرما",
+			"last_name": "3",
+			"is_staff": false,
+			"is_active": true,
+			"date_joined": "2022-01-20T17:22:08.173Z",
+			"image": "profiles/e2.jpeg",
+			"email": "employer3@gmail.com",
+			"phone_number": "09014204944",
+			"user_type": "Employer",
+			"groups": [],
+			"user_permissions": []
+		}
+	},
+	{ "model": "user.employer", "pk": 5, "fields": { "company": "شرکت 1" } },
+	{ "model": "user.employer", "pk": 6, "fields": { "company": "شرکت 2" } },
+	{ "model": "user.employer", "pk": 7, "fields": { "company": "شرکت 3" } },
+	{ "model": "user.freelancer", "pk": 1, "fields": {} },
+	{ "model": "user.freelancer", "pk": 2, "fields": {} },
+	{ "model": "user.freelancer", "pk": 3, "fields": {} },
+	{ "model": "user.freelancer", "pk": 4, "fields": {} },
+	{ "model": "project.category", "pk": 1, "fields": { "name": "کامپیوتر" } },
+	{ "model": "project.category", "pk": 2, "fields": { "name": "عمران" } },
+	{ "model": "project.category", "pk": 3, "fields": { "name": "برق" } },
+	{ "model": "project.category", "pk": 4, "fields": { "name": "علوم پایه" } },
+	{ "model": "project.category", "pk": 5, "fields": { "name": "مکانیک" } },
+	{
+		"model": "project.project",
+		"pk": 1,
+		"fields": {
+			"image": "projects/01.jpg",
+			"title": "عنوان پروژه",
+			"category": 1,
+			"detail": "توضیحات پروژه",
+			"dead_line": "2021-12-22T12:00:00Z",
+			"budget": 200000,
+			"employer": 5,
+			"freelancer": 1
+		}
+	},
+	{
+		"model": "project.project",
+		"pk": 2,
+		"fields": {
+			"image": "projects/02.jpg",
+			"title": "عنوان پروژه 2",
+			"category": 2,
+			"detail": "توضیحات پروژه 2",
+			"dead_line": "2022-06-22T12:00:00Z",
+			"budget": 250000,
+			"employer": 6,
+			"freelancer": null
+		}
+	},
+	{
+		"model": "project.project",
+		"pk": 3,
+		"fields": {
+			"image": "projects/03.jpg",
+			"title": "عنوان پروژه 3",
+			"category": 3,
+			"detail": "توضیحات پروژه 3",
+			"dead_line": "2022-06-20T16:00:00Z",
+			"budget": 30000,
+			"employer": 7,
+			"freelancer": 4
+		}
+	},
+	{
+		"model": "project.project",
+		"pk": 4,
+		"fields": {
+			"image": "",
+			"title": "عنوان پروژه 4",
+			"category": 4,
+			"detail": "توضیحات پروژه 4",
+			"dead_line": "2023-10-20T13:30:00Z",
+			"budget": 500000,
+			"employer": 7,
+			"freelancer": null
+		}
+	},
+	{
+		"model": "project.projectrequest",
+		"pk": 2,
+		"fields": {
+			"project": 2,
+			"freelancer": 1,
+			"created_at": "2022-01-20T17:38:46.867Z"
+		}
+	},
+	{
+		"model": "project.projectrequest",
+		"pk": 4,
+		"fields": {
+			"project": 4,
+			"freelancer": 1,
+			"created_at": "2022-01-20T17:38:54.425Z"
+		}
+	},
+	{
+		"model": "project.projectrequest",
+		"pk": 5,
+		"fields": {
+			"project": 4,
+			"freelancer": 2,
+			"created_at": "2022-01-20T17:39:11.726Z"
+		}
+	},
+	{
+		"model": "project.projectrequest",
+		"pk": 7,
+		"fields": {
+			"project": 2,
+			"freelancer": 2,
+			"created_at": "2022-01-20T17:39:15.607Z"
+		}
+	},
+	{
+		"model": "project.projectrequest",
+		"pk": 10,
+		"fields": {
+			"project": 4,
+			"freelancer": 3,
+			"created_at": "2022-01-20T17:39:44.612Z"
+		}
+	},
+	{
+		"model": "project.projectrequest",
+		"pk": 11,
+		"fields": {
+			"project": 2,
+			"freelancer": 4,
+			"created_at": "2022-01-20T17:39:59.474Z"
+		}
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "348fcc9c9802b557b73bdcbb70b9abe7fda4a57d",
+		"fields": { "user": 2, "created": "2022-01-20T17:20:42.829Z" }
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "47b485eab4bc702ca30c938b0d5c653cdd85b126",
+		"fields": { "user": 4, "created": "2022-01-20T17:20:54.525Z" }
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "5d16fcd52fe6e01a77d14cadf029d1c3875d4acc",
+		"fields": { "user": 7, "created": "2022-01-20T17:22:08.176Z" }
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "c84dcd3718b8770128da014ed04fa9f63a261a82",
+		"fields": { "user": 5, "created": "2022-01-20T17:21:54.248Z" }
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "d1ceb63dc2311c85b9dd05d58ccfc68306ab7358",
+		"fields": { "user": 6, "created": "2022-01-20T17:21:59.737Z" }
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "dc2b7ae7e8578650b51b30521fe70c2d95bfb84c",
+		"fields": { "user": 1, "created": "2022-01-20T17:20:31.615Z" }
+	},
+	{
+		"model": "authtoken.token",
+		"pk": "e210c6d884d23062721c61a2f4510f142c2042e7",
+		"fields": { "user": 3, "created": "2022-01-20T17:20:48.837Z" }
+	}
+]
