@@ -2,7 +2,7 @@ from user.models import User
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 
-class IsEmployer(BasePermission):
+class IsEmployerOrReadOnly(BasePermission):
     def has_permission(self, request, view):
         return bool(
             (request.method in SAFE_METHODS) or
@@ -10,12 +10,22 @@ class IsEmployer(BasePermission):
         )
 
 
-class IsFreelancer(BasePermission):
+class IsFreelancerOrReadOnly(BasePermission):
     def has_permission(self, request, view):
         return bool(
             (request.method in SAFE_METHODS) or
             (request.user.user_type == User.USER_TYPE.FREELANCER)
         )
+
+
+class IsEmployer(BasePermission):
+    def has_permission(self, request, view):
+        return (request.user.user_type == User.USER_TYPE.EMPLOYER)
+
+
+class IsFreelancer(BasePermission):
+    def has_permission(self, request, view):
+        return (request.user.user_type == User.USER_TYPE.FREELANCER)
 
 
 class IsProjectOwner(BasePermission):

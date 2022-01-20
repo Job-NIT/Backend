@@ -1,9 +1,16 @@
 from rest_framework import status
-from .models import Project, ProjectRequest
-from .serializers import ProjectSerializer, ProjectRequestSerializer
-from .permissions import IsEmployer, IsFreelancer, IsProjectOwner
+from .models import Category, Project, ProjectRequest
+from .serializers import (
+    CategorySerializer, ProjectSerializer, ProjectRequestSerializer
+)
+from .permissions import (
+    IsEmployerOrReadOnly, IsFreelancerOrReadOnly,
+    IsEmployer, IsFreelancer, IsProjectOwner
+)
 from django.shortcuts import get_object_or_404
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import (
+    ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
+)
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -12,8 +19,14 @@ from rest_framework.status import (
 )
 
 
+class CategoryListView(ListAPIView):
+    permission_classes = (IsAuthenticated,)
+    serializer_class = CategorySerializer
+    queryset = Category.objects.all()
+
+
 class ProjectListView(ListCreateAPIView):
-    permission_classes = (IsAuthenticated, IsEmployer)
+    permission_classes = (IsAuthenticated, IsEmployerOrReadOnly)
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
 
@@ -23,13 +36,15 @@ class ProjectListView(ListCreateAPIView):
 
 
 class ProjectView(RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated, IsEmployer, IsProjectOwner)
+    permission_classes = (
+        IsAuthenticated, IsEmployerOrReadOnly, IsProjectOwner
+    )
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
 
 
 class ProjectRequestView(APIView):
-    permission_classes = (IsAuthenticated, IsFreelancer)
+    permission_classes = (IsAuthenticated, IsFreelancerOrReadOnly)
 
     def get(self, request, pk):
         project = get_object_or_404(Project, pk=pk)
@@ -40,7 +55,7 @@ class ProjectRequestView(APIView):
             many=True
         )
 
-        return Response(data=requests_serializer.data, status=HTTP_200_OK)
+        return Response(data=requests_serializer.data)
 
     def post(self, request, pk):
         project = get_object_or_404(Project, pk=pk)
@@ -57,7 +72,7 @@ class ProjectRequestView(APIView):
         )
         request_serializer = ProjectRequestSerializer(project_request)
 
-        return Response(data=request_serializer.data, status=HTTP_200_OK)
+        return Response(data=request_serializer.data)
 
 
 class ProjectRequestRemoveView(APIView):
@@ -78,3 +93,41 @@ class ProjectRequestRemoveView(APIView):
         project_request[0].delete()
 
         return Response(status=HTTP_204_NO_CONTENT)
+
+
+class ProjectRequestAcceptView(APIView):
+    permission_classes = (IsAuthenticated, IsEmployer, IsProjectOwner)
+
+    def post(self, request, pk):
+        project_request = get_object_or_404(ProjectRequest, pk=pk)
+        project = project_request.project
+
+        self.check_object_permissions(request, project)
+
+        project.freelancer = project_request.freelancer
+        project.save()
+
+        for item in project.requests.all():
+            item.delete()
+
+        return Response()
+
+
+class EmployerProjectsView(ListAPIView):
+    permission_classes = (IsAuthenticated, IsEmployer)
+    serializer_class = ProjectSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+
+        return Project.objects.filter(employer=user.employer)
+
+
+class FreelancerProjectsView(ListAPIView):
+    permission_classes = (IsAuthenticated, IsFreelancer)
+    serializer_class = ProjectSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+
+        return Project.objects.filter(freelancer=user.freelancer)
