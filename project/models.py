@@ -30,6 +30,13 @@ class Project(models.Model):
         on_delete=models.CASCADE,
         related_name='projects'
     )
+    freelancer = models.ForeignKey(
+        Freelancer,
+        on_delete=models.SET_NULL,
+        related_name='projects',
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return f'{self.title} | {self.employer}'

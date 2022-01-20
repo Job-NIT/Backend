@@ -12,6 +12,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class ProjectSerializer(serializers.ModelSerializer):
     employer = UserDetailSerializer(source="employer.user", read_only=True)
+    freelancer = UserDetailSerializer(source="freelancer.user", read_only=True)
     category = CategorySerializer(read_only=True)
     category_id = serializers.IntegerField(write_only=True, required=False)
 
