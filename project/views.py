@@ -61,6 +61,9 @@ class ProjectRequestView(APIView):
         project = get_object_or_404(Project, pk=pk)
         freelancer = request.user.freelancer
 
+        if project.freelancer:
+            return Response(status=HTTP_400_BAD_REQUEST)
+
         if project.requests.all().filter(
             freelancer=freelancer
         ).exists():
